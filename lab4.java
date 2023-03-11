@@ -1,9 +1,11 @@
-public class program4 
+import java.util.Scanner;
+
+public class lab4 
 {
     int size;
     int arr[];
     int top=-1;
-    program4(int data){
+    lab4(int data){
         this.size=data;
         this.arr=new int[size];
 
@@ -67,11 +69,19 @@ public class program4
     }
 
     public static void main(String[] args) {
-        program4 stack = new program4(10);
         // int arr[] = {1,2,3,4,5,6,7,8,9,10};
+        System.out.println("enter the limit for n:");
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        lab4 stack = new lab4(n);
+        System.out.println("enter the elements:");
+        for (int i=0;i<n;i++){
+            stack.push(sc.nextInt());
+        }
+
         System.out.println(stack.isEmpty());
-        for(int i=1;i< 11;i++){
-        stack.push(i);}
+        // for(int i=1;i< 11;i++){
+        // stack.push(i);}
         System.out.print("Before Deletion  ");
         stack.print_array();
         System.out.print("After Deletion  ");
