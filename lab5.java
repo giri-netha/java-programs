@@ -82,12 +82,8 @@ public void revprint(node head){
         return;
     }
     revprint(head.next);
-    if(head==this.head){
-        System.out.println(head.info);
-    }
-    else{
     System.out.print(head.info+"-->");
-    }
+    
 
 }
 }
